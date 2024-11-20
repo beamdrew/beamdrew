@@ -13,5 +13,5 @@ window.addEventListener('load', () => {
             splashScreen.style.display = 'none'; // Remove splash screen
             mainContent.style.display = 'flex'; // Show main content
         }, 800); // Match fade-out duration
-    }, 2000); // Delay before starting fade-out (2 seconds)
+    }, 2000); // Duration before starting fade-out (2 seconds)
 });
