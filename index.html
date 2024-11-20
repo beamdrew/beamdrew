@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website with Splash Screen</title>
+    <title>Image Splash Screen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Splash Screen -->
-    <div class="splash-screen">
-        <img src="Logo/Logo.png" alt="Logo Placeholder">
+    <div id="splash-screen">
+        <img src="Logo/Logo.png" alt="Splash Screen Image" id="splash-image">
     </div>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <h1>aaaa</h1>
+    <div id="content">
+        <h1>Welcome to My Website!</h1>
+        <p>This is the main content of the website. It appears after the splash screen fades away.</p>
+        <button onclick="alert('Button clicked!')">Click Me</button>
     </div>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html>

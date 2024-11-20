@@ -1,17 +1,13 @@
-// Wait for the window to load, then hide the splash screen
-window.addEventListener('load', () => {
-    const splashScreen = document.querySelector('.splash-screen');
-    const mainContent = document.querySelector('.main-content');
-
-    // Delay for splash screen animation and fade-out
-    setTimeout(() => {
-        splashScreen.style.opacity = '0'; // Fade out
-        splashScreen.style.transition = 'opacity 0.8s ease';
-
-        // After fade-out, hide splash screen and reveal main content
-        setTimeout(() => {
-            splashScreen.style.display = 'none'; // Remove splash screen
-            mainContent.style.display = 'flex'; // Show main content
-        }, 800); // Match fade-out duration
-    }, 2000); // Duration before starting fade-out (2 seconds)
-});
+// Wait for the DOM to load
+window.onload = function() {
+    // Hide the splash screen after 3 seconds and show the main content
+    setTimeout(function() {
+        document.getElementById('splash-screen').style.opacity = '0';
+        document.getElementById('content').style.display = 'block';
+        
+        // Remove the splash screen from the DOM once the fade-out is complete
+        setTimeout(function() {
+            document.getElementById('splash-screen').style.display = 'none';
+        }, 1000); // Delay to match fade-out time
+    }, 3000); // 3 seconds delay before fading out
+};
